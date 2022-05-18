@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jaydar's stuff | news</title>
+        <style>
+            h1, h2, h4 {
+                color: white;
+                background-color: black;
+                font-family: "Comic Sans MS", cursive;
+            }
+            #topbar {
+                font-family: monospace;
+                font-size: 27.5;
+                background-color: gray;
+                color: white;
+                z-index: 6;
+                position: fixed;
+                top: 10px;
+                padding: 0px 4em;
+                text-align: center;
+                width: 98%;
+            }
+            #main-head {
+                margin-top: 100px;
+            }
+            p, ul, .event-order {
+                font-family: "Roboto", "Radio Canada", "Open Sans", "Lato", "Montserrat", sans-serif;
+            }
+            #artc-list {
+                background-color: rgb(247, 197, 81);
+            }
+            #artc-list li {
+                background-color: rgb(161, 255, 174);
+                font-family: "Inconsolata", "Anonymous Pro", "VT323", "Source Code Pro", monospace;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+    <div id = "topbar">
+        <h3>JAYDAR'S STUFF - <a href = "https://www.khanacademy.org/computer-programming/jaydars-games-and-stuff-jaydars-homepage/5887880569339904">homepage</a> - <a href = "https://www.khanacademy.org/computer-programming/jaydars-stuff-faq/5007799726686208">FAQ</a> - <em>News</em> - A bit about me</h3></div>
+        
+        <h1 id = "main-head">hi, this place is full of cool news</h1><!-- totally a lie rn --->
+        <h4>this place talks about stuff, like the other pages</h4>
+        <p>Here's a list of all the news articles, newest to oldest (note that the welcome article will always be at the top):</p>
+        <ol id = "artc-list">
+            <!--<li><a href = "#test-artcl">test article! delete later!</a></li>--->
+            <li><a href = "#welcm-artcl">Welcome to the jaydar's stuff News page!</a></li>
+        </ol>
+        <br>
+        <h2 class = "artcls" id = "no-partcl-artcl">Why I haven't added particles in FCC DE</h2>
+        <p>Hey guys, Jaydar here. This is a short article; I know, but I feel like it's worth mentioning, as there haven't been any major announcements about FCC DE recently. You may have been thinking, "Particles! Add particles, Jaydar!"
+        <br>The truth is, I tried that months ago, but it just didn't work out. I had an old video of exactly what would happen, but that file has since been wiped of the face of the planet. Essentially, what happened was:
+        <ol class = "event-order">
+            <li>I clicked on the cookie</li>
+            <li>The game displayed a huge vertical line of <small>teeny, <i>tiny</i></small> cookies</li>
+            <li>The game froze as the Oh Noes Guy was thinking</li>
+            <li>The game then crashed completely as the Oh Noes Guy puked out an error message that went something like <code>"%%ErrorMessage%%Perhaps you made a mistake in your code?"</code></li>
+        </ol>
+        </p>
+        <p>Yeah, I <i>still</i> have zero idea what that "mistake in [my] code" could be, or what's up with the <code>"%%ErrorMessage%%"</code> part. Maybe it's possible to do it, but I have no idea how, if it is possible.</p>
+        <br>
+        <h2 class = "artcls" id = "githb-artcl">Jaydar's games on GitHub!</h2>
+        <p>That's right! You nosy nerds can die happy, knowing that I'm working on putting all of my games on GitHub. I did this because I know I'm gonna need to know how to use GitHub as a future indie game developer. Also, I love learning how my favorite games work, so I <i>absolutely <b>LOVE</b></i> open-source stuff. That means that I can relate to being furious about poorly or undocumented info on code or proprietary file types.
+        <br>Sorry, I got on a lecture there. Just go somewhere else if you're looking for the benifits of open-source code.
+        <br>As I was saying before I got off-topic, 2 of Jaydar's things are now availible on GitHub, namely;
+        <ul>
+            <li><a href = "https://github.com/jaydarschool/Jaydars-Calculator/">Fake Cookie Clicker: Definitive Edition</a>,</li>
+            and
+            <li><a href = "https://github.com/Jaydar-Studios/fake_cookie_clicker_definitive_edition">Jaydar's Calculator</a></li>
+        </ul></p>
+        <p>Okay, so maybe that's not much, but I'll work on documenting code on more games and things soon.
+        <br>(GitHub is hard, okay?)
+        <br>Head on over to GitHub and look at some code, or, at the very least, you could help me out.
+        <br>Bye! - Jaydar.
+        </p>
+        <!--<h2 class = "artcls" id = "____-artcl"></h2>--> <!-- header template --->
+        <h2 class = "artcls" id = "welcm-artcl">Welcome to the jaydar's stuff News page!</h2>
+        <p>So yeah, this place talks about stuff that's new and going on, so check it every now and then.
+        <br>For an example, there will usually be an article about an update for a big project (unless I forget, lol), or one about a visual rehaul on the jaydar's stuff sites, that kinda stuff.
+        </p>
+        <br><br>
+        <!--<h2 class = "headers" id = "test-artcl">test article! delete later!</h2>
+        <p>Hey, this is a test article to test if this crap works.
+        <br>At this point, if you're seeing this, you're likely a dirty piece of crap who's digging through the code. unless you're me (the creator), then HI ME! how's it going, me? how would i know? oh right, i'm me. 
+        <br>by the way, did you know that talking to yourself is a sign that you're going insane? no, but thanks for the info me! you're welcome.
+        </p>--->
+    </body>
+    <script>
+        var test = document.getElementById("test");
+        var artclsEls = document.getElementsByClassName("artcls");
+        var artclLstEl = document.getElementById("artc-list");
+        
+        for (var i = 0; i < artclsEls.length - 1; i++) {
+            artclLstEl.innerHTML += "<li><a href = '#" + artclsEls[i].id + "'>" + artclsEls[i].textContent + "</a><br>"; //Add each article to the list of articles, along with links to them
+        }
+    </script>
+</html>
