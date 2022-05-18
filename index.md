@@ -1,4 +1,23 @@
-<h1>Hello (World)!</h1>
+<style>
+  #topbar {
+    font-size: 27.5;
+    background-color: white;
+    color: gray;
+    z-index: 6;
+    position: fixed;
+    top: 10px;
+    padding: 0px 4em;
+    text-align: center;
+    border: dashed 4px black;
+    width: 100%;
+  }
+  #main-head {
+    margin-top: 90px;
+  }
+</style>
+<h3 id = "topbar">Jaydar's NEW homepage - <a href = "https://jaydarschool.github.io/old-home-archive">An archive of the old (more fleshed-out) homepage</a></h3>
+
+<h1 id = "main-head">Hello (World)!</h1>
 
 <p>I'm Jaydarschool, although I usually go by the nickname "Jaydar" online, since all of my different usernames can be confusing.
 <br>I like coding stupid crap and learning about computers.</p>
