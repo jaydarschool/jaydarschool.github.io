@@ -37,4 +37,4 @@
   <li><a href = "https://www.khanacademy.org/computer-programming/jq-paint-v02/5384969698983936">jQ Paint</a></li>
 </ul>
 <br>
-<h3 style = "border-top: solid 2px gray">jaydar's <b>NEW<b> homepage - <a href = "https://jaydarschool.github.io/old-home-archive/">An archive of the original (more fleshed-out, but uglier) homepage</a>
+<h3 style = "border-top: solid 2px gray">jaydar's <b>NEW</b> homepage - <a href = "https://jaydarschool.github.io/old-home-archive/">An archive of the original (more fleshed-out, but uglier) homepage</a></h3>
