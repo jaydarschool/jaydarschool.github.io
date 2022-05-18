@@ -29,7 +29,7 @@
 
 <p>I have a lot of small projects, but I can't really list them all here, so here's a little sample:</p>
 <ul>
-  <li><a href = "https://www.khanacademy.org/computer-programming/funky-lookin-stuff-2-the-funkying/6496375217897472">funky-lookin stuff 2<: the funkying/a></li>
+  <li><a href = "https://www.khanacademy.org/computer-programming/funky-lookin-stuff-2-the-funkying/6496375217897472">funky-lookin stuff 2: the funkying</a></li>
   <li><a href = "https://www.khanacademy.org/computer-programming/a-confusing-webpage/5930502803472384">a confusing webpage</a></li>
   <li><a href = "https://www.khanacademy.org/computer-programming/jaydars-calculator-v30c/6262787343958016">Jaydar's Calculator</a></li>
   <li><a href = "https://www.khanacademy.org/computer-programming/jq-paint-v02/5384969698983936">jQ Paint</a></li>
