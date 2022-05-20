@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- 
+    Hey guys, it's Jaydar again, back with another stupid project! 
+    
+    This time, I've made a website that randomizes information every time you reload.
+    This is kind of to show off my fancy new knowledge of DOM JS, essentially, it modifies HTML websites in different ways, like making the Khan Academy website respond to your input, or to make something like... This.
+    
+    I need to add a quick disclaimer that this site is NOT factual in the info it displays, and is NOT SUPPOSED TO BE used for educational purposes. That is because it randomises info every time it loads, so it's very unreliable, obviously.
+    
+    Anyways, enjoy this interesting experiment I've set up here!
+    Sorry, this is kind of a WIP, because I don't quite have much info, just because it took me ~1 hour to comment it, and I don't wanna spend all day on this... yet.
+    --->    
+        <meta charset="utf-8">
+        <title>A confusing webpage</title>
+        <!-- Here's part 1 of code, the CSS! There's not much to see here, because this site doesn't really need that much CSS, but it's here! --->
+        <style>
+            .lang, #other-lang { /* For the language: */
+                color: rgb(184, 0, 0); /* This makes the text dark red */
+            }
+            h1, h2, p { /* For the headers and paragraphs: */
+                font-family: "Roboto", "Radio Canada", "Open Sans", sans-serif; /* Set the font to some good fonts, or whatever you have on your PC that's sans-serif */
+            }
+            
+            
+            
+            h1 { /* For the main header only: */
+                border: 1.25px dotted rgb(12, 158, 105); /* Make an outline of sorts thats 1.25 pixels thick, dotted, and dark turquoise */
+                font-weight: bold; /* Make the text bold */
+                padding: 3.75px; /* Add 3.75 pixels of padding between the text and the outline */
+            }
+            
+            h2 {
+                position: absolute;
+                top: 600px;
+                left: 2em;
+                color: rgb(107, 227, 225);
+            }
+            
+        </style>
+    </head>
+    <!-- And now, part 2 of code, the very important HTML! I'm pretty sure everyone understands most of it, so I won't go into too much depth. --->
+    <body>
+    <h1>The <span class = "lang"></span> language</h1> <!-- The spans with the "lang" class are replaced by 1 random language out of however many, the code itself for replacing the language is later. --->
+    <p><span class = "lang"></span> is one of the most spoken languages in the world. It has been spoken by over <span id = "num"></span> million people, beating out <span id = "other-lang"></span> by just <span id = "other-num"></span> million speakers! <!-- The num span is for stating how many million people have supposedly spoken. The other-lang span is for what the lang beat out. And the other-num span is for how many speakers that language beat it out by. ---> <span class =  "lang"></span> is mostly spoken in <span class = "lang-place"></span>.
+    </p>
+    
+    <h2>Now that you read the whole page, reload it!</h2>
+    
+    <!-- And now, what you've been waiting for, DOM JS code! --->
+    <script>
+        var langEls = document.getElementsByClassName("lang"); //This is the first part of the language randomization, and most important. This grabs all of the spans that are supposed to be the language.
+        
+        var numEl = document.getElementById("num"); //this is for the num element
+        
+        var otherLang = document.getElementById("other-lang"); //this is the other-lang element
+        
+        var otherNum = document.getElementById("other-num"); //this is the other-num element.
+        
+        var langPlaceEls = document.getElementsByClassName("lang-place"); //this is the "lang-place" elements
+        
+        // A way to make a random number generator, credits to KA user @Bob Lyon for the help with most of it:
+        
+        var pjsRandom = function(a, b) { //this creates a new function, which takes 2 arguments; a and b
+            var r = Math.random(); //the variable r is a random number
+        if (arguments.length === 1) { //if the total arguments = 1 then
+            r *= a; //r equals itself times a
+        } else if (arguments.length > 1) { //but then if there is more than one argument
+            r = r * (b - a) + a; //r equals r times the difference of b and a then plus a
+        if (r === b) { //if r = b then
+            r = a; //change r to a
+        }
+        }
+            return Math.round(r); // and now, give back r but rounded.
+        }
+        
+        var langs = ["English", "Spanish", "French", "Italian", "Polish", "Taiwanese", "Japanese", "Chinese", "Arabic", "Brazilian", "Russian", "Welsh"]; //This creates a "collection" of languages, which will be used later.
+        
+        var langPlaces = ["North America, Canada, and England", "Mexico, Spain, and North America (to a lesser extent)", "France", "Italy", "Poland", "Taiwan", "Japan", "China", "Arabia", "Brazil (and South America in general)", "Russia", "Whales"] //This creates another collection, this time for the places that these languages are spoken in. The places are in the same order as the languages.
+        
+        
+        var rando = function(A, B, C) { //this creates a function that has 3 inputs, and this function is used to randomize a lot of info.
+            for (var i = 0; i < langEls.length; i++) { //create the a variable called i, then add 1 to it, and only execute the code while i is less than the number of times that the language appears
+                langEls[i].textContent = langs[A]; //The text contents of every instance of the language equals the language id of the input that is passed to this function
+                
+            }
+            
+            numEl.textContent = B; //This sets the part of the text that says how many million to a random number from 1 to 50.
+            otherLang.textContent = langs[C]; //this sets the other language to another random language.
+            otherNum.textContent = B / 2;
+            for (var i = 0; i < langPlaces.length; i++) {
+                langPlaceEls[i].textContent = langPlaces[A]; //this sets the main language's location(s) to the "A" parameter, the same as the main language itself.
+            }
+        };
+        
+        //document.addEventListener("load", rando(0, 1, 1)); //ver sion of the eventListener I used for development.
+        document.addEventListener("load", rando(pjsRandom(0, (langs.length - 1)), pjsRandom(1, 100), pjsRandom(0, (langs.length - 1)))); //when the page is loaded, change the info
+    </script>
+    </body>
+</html>
