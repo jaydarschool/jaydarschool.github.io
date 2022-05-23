@@ -9,3 +9,9 @@
 <h2><a href = "Jaydar's-Calc" target = "_blank">Jaydar's Calculator</a></h2>
 <p>"Jaydar's Calculator" is my attempt at a simple calculator using HTML and jQuery (and CSS, to a lesser extent).
 <br>If you want more info on it, check out <a href = "https://github.com/jaydarschool/Jaydars-Calculator" target = "_blank">The original GitHub page</a>.</p>
+<br>
+<h2><a href = "funky-lookin-collection" target = "_blank">The Funky-Lookin COLLECTION!</a></h2>
+<p>For those who don't know, funky-lookin stuff is a series of... things? That I made, where you can make, as the name suggests, some funky-lookin stuff.
+<br>These projects were originally split across 4 seperate websites on Khan Academy, but I decided to put em all on one page here. I forgot to label them, but the top-left game is the original game, top-right is the sequel, bottom-left is the threequel, and bottom-right is the 4quel/spin-off. 
+<br>Hopefully, I'll remember to add labels soon.
+<br><br>Fun fact: this took <b><i>WAY</i></b> too long to get together in one site, for it being a simple collection.</p>

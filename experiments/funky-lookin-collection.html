@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            canvas {
+                border: solid 1.25px;
+		margin: 5%;
+            }
+            .left {
+              float: left;
+            }
+            .right {
+              float: right;
+            }
+        </style>
+    </head>
+    <body>
+    <p align="center"> 
+	<!-- This draws the Canvas for Funky-lookin stuff 1 on the webpage -->
+      <canvas id = "canvas1" class = "left"></canvas> 
+  <!-- Now, for the sequel --->
+      <canvas id = "canvas2" class = "right"></canvas>
+  <!-- here comes the threequel --->
+      <canvas id = "canvas3" class = "left"></canvas>
+  <!-- now the spin-off/4quel --->
+      <canvas id = "canvas4" class = "right"></canvas>
+    </p>
+    
+    </body>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+ <script>
+    var sketch1 = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400);
+        background(255, 255, 255);
+        draw = function() {
+                fill(mouseX, mouseY, random(0, 255));
+                stroke(mouseX, mouseY, random(0, 255));
+                ellipse(mouseX, mouseY, mouseY, mouseX);
+           
+        };
+    }};
+    var sketch2 = function(processingInstance) {
+     with (processingInstance) {
+        size(600, 600);
+        background(255, 255, 255);
+        //creates the background timer
+        var i = 0;
+        var draw = function() {
+            //framerate handling
+            frameRate(100);
+            //your "paintbrushes," of sorts
+            fill(random(0, 255), mouseX, random(0, 255));
+            ellipse(mouseX, mouseX, 20 + (mouseX / 10), 20 + (mouseX / 5));
+            fill(mouseY, random(0, 255), random(0, 255));
+            ellipse(mouseY, mouseY, 20 + (mouseY / 10), 20 + (mouseY / 5));
+            fill(mouseY, mouseX, random(0, 255));
+            ellipse(mouseY, mouseX, 20 + (mouseY / 10), 20 + (mouseX / 3));
+            fill(mouseX, random(0, 255), mouseY);
+            ellipse(mouseX, mouseY, 20 + (mouseX / 10), 20 + (mouseY / 7));
+            //every 15 seconds, the background changes
+            if (i >= 15) {
+                background(mouseX / mouseY, random(0, 255), random(0, 255));
+                i = 0;
+            } else {
+                i += (1 / 100);
+            }
+        };
+
+     }};
+    var sketch3 = function(processingInstance) {
+     with (processingInstance) {
+        size(600, 600);
+        background(255, 255, 255);
+        /*
+    The funky-lookin stuff francise is copyright 2022, jaydar studios.
+    All code is by me.
+    Enjoy moving your mouse around, and making cool stuff.
+    You can also check it out in slow motion by changing the framerate to ~15 fps.
+        */
+        // Background timer setup
+        var i = 0;
+
+        //the rest of the code.
+        var draw = function() {
+            //simple handling
+            frameRate(30);
+            strokeWeight(3);
+
+            //sorry for the awful-looking code here
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX + random(-45, 45), mouseX + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY + random(-45, 45), mouseY + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY + random(-45, 45), mouseX + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX + random(-10, 10), mouseY + random(-10, 10), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX / (mouseY / 75) + random(10, 45), mouseY / (mouseX / 75) + random(10, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY / (mouseX / 75) + random(10, 45), mouseX / (mouseY / 75) + random(10, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY / (mouseY / 7500) + random(10, 45), mouseX / (mouseX / 7500) + random(10, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX / (mouseX / 7500) + random(10, 45), mouseY / (mouseY / 7500) + random(10, 45), random(15, 40), random(15, 40));
+
+            //simple background timer
+            if (i >= 15) {
+                background(random(0, 255), random(0, 255), random(0, 255));
+                i = 0;
+            } else {
+                i += (1 / 30);
+            }
+
+        };
+
+     };
+     
+     var sketch4 = function(processingInstance) {
+     with (processingInstance) {
+        size(600, 600);
+        background(255, 255, 255);
+        var i = 0;
+        var time = 60;
+        var draw = function() {
+
+            strokeWeight(random(1, 13));
+            frameRate(30);
+
+            //sorry for the awful-looking code here
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(random(5, 595), random(5, 595), random(15, 157), random(20, 107));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX + random(-45, 45), mouseX + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY + random(-45, 45), mouseY + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY + random(-45, 45), mouseX + random(-45, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX + random(-10, 10), mouseY + random(-10, 10), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX / (mouseY / 75) + random(10, 45), mouseY / (mouseX / 75) + random(10, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY / (mouseX / 75) + random(10, 45), mouseX / (mouseY / 75) + random(10, 45), random(15, 40), random(15, 40));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY / (mouseY / 7500) + random(10, 45), mouseX / (mouseX / 7500) + random(10, 45), random(38, 111), random(37, 77));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseX / (mouseX / 7500) + random(10, 45), mouseY / (mouseY / 7500) + random(10, 45), random(28, 110), random(23, 93));
+
+            fill(random(0, 255), random(0, 255), random(0, 255));
+            stroke(random(0, 255), random(0, 255), random(0, 255));
+            ellipse(mouseY / (mouseY / 7500), mouseY / (mouseY / 7500), random(56, 157), random(15, 133));
+            if (i >= time) {
+                background(random(0, 255), random(0, 255), random(0, 255));
+                i = 0;
+                if (time !== 1) {
+                    time -= 5;
+                } else {
+                    time = 60;
+                }
+            } else {
+                i += (1 / 30);
+            }
+        };
+     }};
+    /* var sketch_ = function(processingInstance) {
+     with (processingInstance) {
+        size(600, 600);
+        background(255, 255, 255);
+     }}; */ // template
+    // Get the canvas that Processing-js will use first
+    var canvas1 = document.getElementById("canvas1"); 
+    // Pass the function sketch1 (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas1, sketch1); 
+    
+    // Get the canvas that Processing-js will use next
+    var canvas2 = document.getElementById("canvas2");
+    //and pass the function sketch2
+    var processingInstance = new Processing(canvas2, sketch2);
+    
+   //get the next canvas that PJS will use
+    var canvas3 = document.getElementById("canvas3");
+   //pass the function sketch3
+    var processingInstance = new Processing(canvas3, sketch3);
+
+   //get the last canvas
+    var canvas4 = document.getElementById("canvas4");
+   //pass the function sketch4
+    var processingInstance = new Processinf(canvas4, sketch4);
+ </script>
+</html>
