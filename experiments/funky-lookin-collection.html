@@ -25,11 +25,17 @@
       <canvas id = "canvas3" class = "left"></canvas>
   <!-- now the spin-off/4quel --->
       <canvas id = "canvas4" class = "right"></canvas>
+      <span id = "errs">Errors:
+      <br></span>
     </p>
     
     </body>
     <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
  <script>
+    catch(err) {
+      document.getElementById("errs").innerHTML += 
+      err.name + "<br>" + err.message;
+    }
     var sketch1 = function(processingInstance) {
      with (processingInstance) {
         size(400, 400);
