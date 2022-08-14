@@ -14,4 +14,5 @@
 <p>For those who don't know, funky-lookin stuff is a series of... things? That I made, where you can make, as the name suggests, some funky-lookin stuff.
 <br>These projects were originally split across 4 seperate websites on Khan Academy, but I decided to put em all on one page here. I forgot to label them, but the top-left game is the original game, top-right is the sequel, bottom-left is the threequel, and bottom-right is the 4quel/spin-off. 
 <br>Hopefully, I'll remember to add labels soon.
-<br><br>Fun fact: this took <b><i>WAY</i></b> too long to get together in one site, for it being a simple collection.</p>
+<br><br>Fun fact: this took <b><i>WAY</i></b> too long to get together in one site, for it being a simple collection.
+  <br><b style = "font-size: 30;">Oh yeah, and it's currently broken.</b></p>
